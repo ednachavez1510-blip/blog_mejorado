@@ -4,42 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Blog con Comentarios</title>
+  <!-- Estilo principal -->
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    /* --- Estilos del overlay de contraseña --- */
-    #overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.85);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      z-index: 1000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-    }
-    #overlay input {
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: none;
-      font-size: 16px;
-    }
-    #overlay button {
-      padding: 10px 20px;
-      background: #ff69b4; /* rosa */
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    #overlay button:hover {
-      background: #ff1493; /* rosa fuerte */
-    }
-  </style>
 </head>
 <body>
 
@@ -48,7 +14,7 @@
     <h2>🔒 Acceso restringido</h2>
     <p>Ingresa la contraseña para acceder</p>
     <input type="password" id="password" placeholder="Contraseña">
-    <button id="btnEntrar">Entrar</button>
+    <button type="button" onclick="verificarPassword()">Entrar</button>
     <p id="mensaje-error" style="color: yellow; margin-top: 10px;"></p>
   </div>
 
@@ -79,6 +45,7 @@
     </main>
   </div>
 
+  <!-- Script de comentarios y contraseña -->
   <script src="js/script.js"></script>
 </body>
 </html>
