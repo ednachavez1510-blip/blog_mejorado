@@ -1,0 +1,124 @@
+/* Estilos generales */
+body {
+  font-family: 'Poppins', sans-serif; /* Fuente moderna y bonita */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a5acd, #87cefa); /* Degradado morado → azul claro */
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  background: #4b0082; /* Morado intenso */
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 4px solid #87cefa; /* Línea decorativa azul */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+/* Contenido principal */
+main {
+  max-width: 850px;
+  margin: 30px auto;
+  background: #fdfdff; /* Fondo muy claro */
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Subtítulos */
+h2, h3 {
+  color: #4b0082; /* Morado */
+  margin-bottom: 10px;
+}
+
+/* Formulario de comentarios */
+.comment-form {
+  margin-bottom: 25px;
+}
+
+.comment-form input, 
+.comment-form textarea, 
+.comment-form button {
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  outline: none;
+  border-color: #6a5acd; /* Morado */
+  box-shadow: 0 0 5px rgba(106,90,205,0.5);
+}
+
+/* Botones */
+.comment-form button {
+  background: #6a5acd; /* Morado suave */
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background: #483d8b; /* Morado más fuerte */
+}
+
+/* Botón de borrar */
+.comment-form .btn-delete {
+  background: #4169e1; /* Azul real */
+}
+
+.comment-form .btn-delete:hover {
+  background: #1e3fa9; /* Azul oscuro */
+}
+
+/* Comentarios publicados */
+.comment {
+  background: #f4f0ff; /* Fondo lila claro */
+  border-left: 5px solid #6a5acd;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+
+.comment strong {
+  display: block;
+  color: #4b0082;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.comment p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.comment small {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Imágenes dentro de los comentarios */
+.comment img {
+  max-width: 220px;
+  display: block;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 2px solid #87cefa; /* Borde azul */
+}
