@@ -13,6 +13,15 @@ function verificarPassword() {
   }
 }
 
+// Aseguramos que el botón "Entrar" ejecute bien la función
+window.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector("#overlay button");
+  if (btn) {
+    btn.type = "button"; // Evita que se comporte como submit
+    btn.addEventListener("click", verificarPassword);
+  }
+});
+
 // --- Tu código original para los comentarios ---
 
 // Cargar comentarios almacenados al iniciar
