@@ -6,23 +6,14 @@ function verificarPassword() {
   const mensajeError = document.getElementById("mensaje-error");
 
   if (password === "1510") {
-    overlay.style.display = "none"; // Quita el overlay
-    contenido.style.display = "block"; // Muestra el blog
+    overlay.style.display = "none"; // Quita overlay
+    contenido.style.display = "block"; // Muestra blog
   } else {
     mensajeError.textContent = "❌ Contraseña incorrecta";
   }
 }
 
-// Aseguramos que el botón "Entrar" ejecute bien la función
-window.addEventListener("DOMContentLoaded", () => {
-  const btn = document.querySelector("#overlay button");
-  if (btn) {
-    btn.type = "button"; // Evita que se comporte como submit
-    btn.addEventListener("click", verificarPassword);
-  }
-});
-
-// --- Tu código original para los comentarios ---
+// --- Código original de comentarios ---
 
 // Cargar comentarios almacenados al iniciar
 window.onload = function() {
