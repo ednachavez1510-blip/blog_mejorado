@@ -1,24 +1,19 @@
-// --- Protección con contraseña ---
-function verificarPassword() {
-  const password = document.getElementById("password").value;
-  const overlay = document.getElementById("overlay");
-  const contenido = document.getElementById("contenido");
-  const mensajeError = document.getElementById("mensaje-error");
-
-  if (password === "1510") {
-    overlay.style.display = "none"; // Quita overlay
-    contenido.style.display = "block"; // Muestra blog
-  } else {
-    mensajeError.textContent = "❌ Contraseña incorrecta";
-  }
-}
-
-// --- Código original de comentarios ---
-
 // Cargar comentarios almacenados al iniciar
 window.onload = function() {
   const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
   comentariosGuardados.forEach(c => mostrarComentario(c));
+}
+let pass = prompt("Introduce la contraseña para acceder al blog:");
+const passwordCorrecta = "1510";
+
+if (pass !== passwordCorrecta) {
+    document.body.innerHTML = "<h1>Acceso denegado ❌</h1>";
+} else {
+    // Solo si la contraseña es correcta, carga los comentarios guardados
+    window.onload = function() {
+        const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
+        comentariosGuardados.forEach(c => mostrarComentario(c));
+    }
 }
 
 function agregarComentario() {
